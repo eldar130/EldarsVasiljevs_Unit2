@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -28,5 +29,10 @@ public class fly_script : MonoBehaviour
     void FixedUpdate()
     {
         transform.rotation = Quaternion.Euler(0, 0, rb.linearVelocityY * rotationSpeed);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        game_manager_script.instance.GameOver();
     }
 }
