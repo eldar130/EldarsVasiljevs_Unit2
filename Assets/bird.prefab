@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6630800220364420992}
   - component: {fileID: 1847711739660118114}
   - component: {fileID: 6064421093387297100}
-  - component: {fileID: 7974186578273213231}
+  - component: {fileID: -228913365473921357}
   m_Layer: 0
   m_Name: bird
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.23999734, y: 0.09999638}
   m_Size: {x: 4.426713, y: 3.173425}
   m_Direction: 1
---- !u!114 &7974186578273213231
+--- !u!114 &-228913365473921357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +166,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1845299090481700947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4c3127c41a00654b9ebf86df6f08b57, type: 3}
+  m_Script: {fileID: 11500000, guid: f72e228ac6f814145b9e1a007560bd13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  velocity: 1.5
+  velocity: 2
+  rotationSpeed: 10
