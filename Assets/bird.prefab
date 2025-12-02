@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 9109394273984602446}
   - component: {fileID: 6630800220364420992}
   - component: {fileID: 1847711739660118114}
-  - component: {fileID: 6312949349152325560}
+  - component: {fileID: 6064421093387297100}
+  - component: {fileID: 7974186578273213231}
   m_Layer: 0
   m_Name: bird
   m_TagString: Untagged
@@ -49,7 +50,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.65
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -119,8 +120,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6312949349152325560
-BoxCollider2D:
+--- !u!70 &6064421093387297100
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -153,15 +154,19 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.38432193, y: -0.000000059604645}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.88, y: 4.01}
-    newSize: {x: 5.88, y: 4.01}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 4.289085, y: 3.4737368}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.23999734, y: 0.09999638}
+  m_Size: {x: 4.426713, y: 3.173425}
+  m_Direction: 1
+--- !u!114 &7974186578273213231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845299090481700947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c3127c41a00654b9ebf86df6f08b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  velocity: 1.5
