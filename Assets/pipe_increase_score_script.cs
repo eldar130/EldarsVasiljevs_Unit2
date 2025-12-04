@@ -6,7 +6,7 @@ public class pipe_increase_score_script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            score.instance.UpdateScore(); 
+            score.instance.UpdateScore(1);
         }
     }
 }

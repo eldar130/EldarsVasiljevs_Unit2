@@ -19,7 +19,6 @@ public class score : MonoBehaviour
     void Start()
     {
         currentScore.text = scoreNum.ToString();
-
         bestScore.text = PlayerPrefs.GetInt("BestScore", 0).ToString();
         UpdateBestScore();
     }
@@ -33,9 +32,10 @@ public class score : MonoBehaviour
         }
     }
 
-    public void UpdateScore()
+    // Updated to accept amount
+    public void UpdateScore(int amount)
     {
-        scoreNum++;
+        scoreNum += amount; // Add points
         currentScore.text = scoreNum.ToString();
         UpdateBestScore();
     }
