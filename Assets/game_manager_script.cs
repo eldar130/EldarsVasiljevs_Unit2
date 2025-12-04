@@ -1,3 +1,4 @@
+using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -34,6 +35,7 @@ public class game_manager_script : MonoBehaviour
 
     public void GameOver()
     {
+        score.scoreNum = 0;
         menuCanvas.SetActive(true);
         Time.timeScale = 0f;
     }

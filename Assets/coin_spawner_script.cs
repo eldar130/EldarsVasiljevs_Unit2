@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class coin_spawner_script : MonoBehaviour
 {
-    [SerializeField] private float spawnTime = 36.25f;
-    [SerializeField] private float rangeTop = 1.8f;
+    [SerializeField] private float spawnTime = 33.75f;
+    [SerializeField] private float rangeTop = 1.5f;
     [SerializeField] private float rangeBottom = -1.1f;
     [SerializeField] private GameObject coin;
     private float timer;

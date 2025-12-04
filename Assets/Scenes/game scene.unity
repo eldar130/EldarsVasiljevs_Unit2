@@ -2175,6 +2175,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1987907604256641781, guid: 70d387fe0d3dcd944afffd6cbf7c7a2f, type: 3}
+      propertyPath: rangeTop
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987907604256641781, guid: 70d387fe0d3dcd944afffd6cbf7c7a2f, type: 3}
+      propertyPath: spawnTime
+      value: 33.75
+      objectReference: {fileID: 0}
     - target: {fileID: 3487144089738944198, guid: 70d387fe0d3dcd944afffd6cbf7c7a2f, type: 3}
       propertyPath: m_Name
       value: coin spawner

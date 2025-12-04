@@ -8,7 +8,7 @@ public class score : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentScore;
     [SerializeField] private TextMeshProUGUI bestScore;
     [SerializeField] private GameObject winCanvas;
-    private int scoreNum;
+    public static int scoreNum;
 
     void Awake()
     {
@@ -24,6 +24,7 @@ public class score : MonoBehaviour
         bestScore.text = PlayerPrefs.GetInt("BestScore", 0).ToString();
         UpdateBestScore();
     }
+
 
     void UpdateBestScore()
     {
@@ -52,6 +53,6 @@ public class score : MonoBehaviour
     public void Continue()
     {
         winCanvas.SetActive(false);
-        Time.timeScale = 1f;
+        game_manager_script.instance.RestartGame();
     }
 }
