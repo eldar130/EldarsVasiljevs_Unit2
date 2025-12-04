@@ -1,3 +1,4 @@
+using NUnit.Framework.Interfaces;
 using TMPro;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class score : MonoBehaviour
     public static score instance;
     [SerializeField] private TextMeshProUGUI currentScore;
     [SerializeField] private TextMeshProUGUI bestScore;
+    [SerializeField] private GameObject winCanvas;
     private int scoreNum;
 
     void Awake()
@@ -38,5 +40,18 @@ public class score : MonoBehaviour
         scoreNum += amount; // Add points
         currentScore.text = scoreNum.ToString();
         UpdateBestScore();
+
+        // display you win and restart or continue text
+        if (scoreNum == 100)
+        {
+            winCanvas.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
+
+    public void Continue()
+    {
+        winCanvas.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

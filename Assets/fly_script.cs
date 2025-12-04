@@ -35,7 +35,7 @@ public class fly_script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("floor") || collision.gameObject.CompareTag("pipes"))
         {
-            game_manager_script.instance.GameOver(); 
+            game_manager_script.instance.GameOver();
         }
     }
     void OnTriggerEnter2D(Collider2D collision)

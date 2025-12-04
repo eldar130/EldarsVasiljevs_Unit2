@@ -20,7 +20,7 @@ public class game_manager_script : MonoBehaviour
 
         if (!hasStarted)
         {
-            GameOverText.SetActive(false);
+            GameOverText.SetActive(false);// hide gameover text
 
             menuCanvas.SetActive(true);
             Time.timeScale = 0f;
