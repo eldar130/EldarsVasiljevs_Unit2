@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class pipe_movement : MonoBehaviour
+public class cloud_movement_script : MonoBehaviour
 {
     [SerializeField] private float speed = 0.65f;
 

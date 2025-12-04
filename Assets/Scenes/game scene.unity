@@ -1661,6 +1661,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4811541659644912246, guid: 07726ecc4222a6d4798af20a78628c2a, type: 3}
+      propertyPath: cloud
+      value: 
+      objectReference: {fileID: 394296640802531900, guid: 4f4d8af34a61bf54dae0a9b5c22c3bfd, type: 3}
+    - target: {fileID: 4811541659644912246, guid: 07726ecc4222a6d4798af20a78628c2a, type: 3}
+      propertyPath: rangeTop
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811541659644912246, guid: 07726ecc4222a6d4798af20a78628c2a, type: 3}
+      propertyPath: rangeBottom
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6361425614151766370, guid: 07726ecc4222a6d4798af20a78628c2a, type: 3}
       propertyPath: m_Name
       value: cloud spawner

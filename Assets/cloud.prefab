@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6739968669624371512}
   - component: {fileID: 5555057347347758957}
   - component: {fileID: 2586679313110861484}
+  - component: {fileID: -3956638393794417762}
+  - component: {fileID: -8764237232093214018}
   m_Layer: 0
   m_Name: cloud
-  m_TagString: Untagged
+  m_TagString: cloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.01662, y: -0.77701, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1364143, y: 0.1364143, z: 0.1364143}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6981827254641702772, guid: e93e924bf94bb2746a3960d45c0594fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,7 +123,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -137,3 +139,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 8.269631, y: 2.1287107}
   m_EdgeRadius: 0
+--- !u!114 &-3956638393794417762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394296640802531900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25f9df94a8d3de4dbef79fb252fb929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  speed: 0.65
+--- !u!114 &-8764237232093214018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394296640802531900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6047d329a8588724080e2910227c0aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  trollface: {fileID: 1855971407179551427, guid: e5a963ba263b74a4cbb3c33c49bca35a, type: 3}
+  spawnOffset: {x: 0.07, y: -0.05, z: 0}

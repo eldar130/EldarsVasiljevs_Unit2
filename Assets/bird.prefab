@@ -171,3 +171,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   velocity: 2
   rotationSpeed: 10
+  trollface: {fileID: 1855971407179551427, guid: e5a963ba263b74a4cbb3c33c49bca35a, type: 3}

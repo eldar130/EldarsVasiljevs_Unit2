@@ -33,6 +33,18 @@ public class fly_script : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        game_manager_script.instance.GameOver();
+        if (collision.gameObject.CompareTag("floor") || collision.gameObject.CompareTag("pipes"))
+        {
+            game_manager_script.instance.GameOver(); 
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("cloud"))
+        {
+            Vector3 cloudPosition = collision.transform.position;
+            trollface_script.instance.TrollfaceSpawn(cloudPosition);
+            game_manager_script.instance.GameOver();
+        }
     }
 }
