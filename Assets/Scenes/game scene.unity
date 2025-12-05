@@ -282,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   menuCanvas: {fileID: 1401489713}
   GameOverText: {fileID: 767034490}
+  winCanvas: {fileID: 2043405099}
 --- !u!4 &236191776
 Transform:
   m_ObjectHideFlags: 0
@@ -1984,7 +1985,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 236191775}
         m_TargetAssemblyTypeName: game_manager_script, Assembly-CSharp
-        m_MethodName: RestartGame
+        m_MethodName: GameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

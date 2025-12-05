@@ -8,6 +8,7 @@ public class game_manager_script : MonoBehaviour
 
     [SerializeField] private GameObject menuCanvas;
     [SerializeField] private GameObject GameOverText;
+    [SerializeField] private GameObject winCanvas;
     private static bool hasStarted = false;
 
     void Awake()
@@ -35,6 +36,7 @@ public class game_manager_script : MonoBehaviour
 
     public void GameOver()
     {
+        winCanvas.SetActive(false);
         score.scoreNum = 0;
         menuCanvas.SetActive(true);
         Time.timeScale = 0f;
