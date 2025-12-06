@@ -9,6 +9,7 @@ public class game_manager_script : MonoBehaviour
     [SerializeField] private GameObject menuCanvas;
     [SerializeField] private GameObject GameOverText;
     [SerializeField] private GameObject winCanvas;
+    [SerializeField] private AudioManager audioManager;
     private static bool hasStarted = false;
 
     void Awake()
@@ -24,6 +25,8 @@ public class game_manager_script : MonoBehaviour
         {
             GameOverText.SetActive(false);// hide gameover text
 
+            audioManager.PlayMusic(audioManager.menuBackground);//playing menu music at start of game
+
             menuCanvas.SetActive(true);
             Time.timeScale = 0f;
             hasStarted = true;
@@ -36,6 +39,7 @@ public class game_manager_script : MonoBehaviour
 
     public void GameOver()
     {
+        audioManager.PlayMusic(audioManager.menuBackground);//playing menu music at game over screen
         winCanvas.SetActive(false);
         score.scoreNum = 0;
         menuCanvas.SetActive(true);
