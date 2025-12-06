@@ -34,6 +34,7 @@ public class game_manager_script : MonoBehaviour
         else
         {
             menuCanvas.SetActive(false); // hide menu after restart
+            audioManager.PlayMusic(audioManager.gameBackground);//playing game music when playing the game
         }
     }
 
