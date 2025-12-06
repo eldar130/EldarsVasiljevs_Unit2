@@ -8,6 +8,7 @@ public class score : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentScore;
     [SerializeField] private TextMeshProUGUI bestScore;
     [SerializeField] private GameObject winCanvas;
+    AudioManager audioManager;
     public static int scoreNum;
 
     void Awake()
@@ -16,6 +17,8 @@ public class score : MonoBehaviour
         {
             instance = this;
         }
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Start()
@@ -45,6 +48,7 @@ public class score : MonoBehaviour
         // display you win and restart or continue text
         if (scoreNum == 100)
         {
+            audioManager.PlaySFX(audioManager.winSound);
             winCanvas.SetActive(true);
             Time.timeScale = 0f;
         }

@@ -11,7 +11,13 @@ public class fly_script : MonoBehaviour
 {
     [SerializeField] private float velocity = 2f;
     [SerializeField] private float rotationSpeed = 10f;
+    AudioManager audioManager;
     private Rigidbody2D rb;
+
+    void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -22,6 +28,7 @@ public class fly_script : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
         {
+            audioManager.PlaySFX(audioManager.flap);
             rb.linearVelocity = Vector2.up * velocity;
         }
     }
@@ -33,15 +40,32 @@ public class fly_script : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("floor") || collision.gameObject.CompareTag("pipes"))
+        string tag = collision.gameObject.tag;
+
+        switch (tag)
         {
-            game_manager_script.instance.GameOver();
+            case "floor":
+                audioManager.PlaySFX(audioManager.hitFloor);
+                GameOver();
+                break;
+
+            case "pipes":
+                audioManager.PlaySFX(audioManager.hitPipe);
+                GameOver();
+                break;
         }
     }
+
+    private void GameOver()
+    {
+        game_manager_script.instance.GameOver();
+    }
+    
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("cloud"))
         {
+            audioManager.PlaySFX(audioManager.trollfaceLaugh);
             Vector3 cloudPosition = collision.transform.position;
             trollface_script.instance.TrollfaceSpawn(cloudPosition);
             game_manager_script.instance.GameOver();
