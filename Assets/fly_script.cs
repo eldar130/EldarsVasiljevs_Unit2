@@ -1,11 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
-using UnityEditor.Build.Content;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
 public class fly_script : MonoBehaviour
 {
