@@ -15,7 +15,7 @@ public class coin_pickup_script : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             audioManager.PlaySFX(audioManager.coinPickup);
-            score.instance.UpdateScore(84); // change back to 5
+            score.instance.UpdateScore(5);
             Destroy(gameObject);
         }
     }

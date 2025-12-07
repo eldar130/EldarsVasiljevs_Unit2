@@ -19,6 +19,10 @@ public class fly_script : MonoBehaviour
 
     void Update()
     {
+        // Only allow flapping if the game is active
+        if (!game_manager_script.instance.isGameActive)
+            return;
+
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
         {
             audioManager.PlaySFX(audioManager.flap);
