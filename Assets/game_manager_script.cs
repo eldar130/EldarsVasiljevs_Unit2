@@ -25,6 +25,7 @@ public class game_manager_script : MonoBehaviour
 
         Time.timeScale = 1f;
 
+        //as soon as game starts
         if (!hasStarted)
         {
             GameOverText.SetActive(false);// hide gameover text
@@ -44,6 +45,7 @@ public class game_manager_script : MonoBehaviour
             hasStarted = true;
             isGameActive = false;
         }
+        //all other times the game is played
         else
         {
             menuCanvas.SetActive(false); // hide menu after restart

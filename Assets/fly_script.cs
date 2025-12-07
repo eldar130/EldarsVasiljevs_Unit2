@@ -23,6 +23,7 @@ public class fly_script : MonoBehaviour
         if (!game_manager_script.instance.isGameActive)
             return;
 
+        //go up when mouse or space bar pressed
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
         {
             audioManager.PlaySFX(audioManager.flap);
@@ -30,11 +31,13 @@ public class fly_script : MonoBehaviour
         }
     }
 
+    //bird rotation
     void FixedUpdate()
     {
         transform.rotation = Quaternion.Euler(0, 0, rb.linearVelocityY * rotationSpeed);
     }
 
+    // colission check
     void OnCollisionEnter2D(Collision2D collision)
     {
         string tag = collision.gameObject.tag;
@@ -57,7 +60,8 @@ public class fly_script : MonoBehaviour
     {
         game_manager_script.instance.GameOver();
     }
-    
+
+    //set trollface to cloud that player touched
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("cloud"))
