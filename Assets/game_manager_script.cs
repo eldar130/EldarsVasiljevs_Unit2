@@ -85,4 +85,15 @@ public class game_manager_script : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void ExitGame()
+    {
+        // If running in the Unity Editor
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+    #else
+        // If running as a standalone build
+        Application.Quit();
+    #endif
+    }
 }
