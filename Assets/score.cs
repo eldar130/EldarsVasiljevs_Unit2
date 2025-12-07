@@ -20,6 +20,11 @@ public class score : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
+    void Update()
+    {
+        Cheat();
+    }
+
     void Start()
     {
         currentScore.text = scoreNum.ToString();
@@ -57,5 +62,24 @@ public class score : MonoBehaviour
     {
         winCanvas.SetActive(false);
         game_manager_script.instance.RestartGame();
+    }
+
+    void Cheat()
+    {
+        // Only allow cheat if the game is currently active
+        if (!game_manager_script.instance.isGameActive)
+            return;
+
+        // get key down
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            scoreNum = 100;
+            currentScore.text = scoreNum.ToString();
+
+            // Trigger win logic immediately
+            audioManager.PlaySFX(audioManager.winSound);
+            winCanvas.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 }
